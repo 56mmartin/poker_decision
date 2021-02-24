@@ -29,9 +29,11 @@ surf = ax.plot_surface(bet, bluff, EV_P1, cmap=cm.coolwarm,
                        linewidth=0, antialiased=True)
 
 # Customize the z axis.
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 1)
 ax.set_zlim(0, 1)
 ax.set_xlabel("Bet size")
-ax.set_ylabel("Bluff %")
+ax.set_ylabel("Bluff probability")
 ax.set_zlabel("EV")
 ax.zaxis.set_major_locator(LinearLocator(10))
 # A StrMethodFormatter is used automatically
